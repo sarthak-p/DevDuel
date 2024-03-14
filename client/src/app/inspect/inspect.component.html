@@ -10,4 +10,6 @@
   <br />
   <br />
   <button class="submit-button" (click)="onSubmit()">Inspect</button>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  <app-user-info-card [user]="userData"></app-user-info-card>
 </div>

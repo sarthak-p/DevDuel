@@ -21,13 +21,13 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
-    "@babel/node": "^7.6.1",
+    "@babel/core": "^7.24.0",
+    "@babel/node": "^7.23.9",
     "@babel/preset-env": "^7.6.0",
     "@babel/register": "^7.6.0",
     "concurrently": "^4.0.1",
     "joi": "^14.3.1",
     "live-server": "^1.2.0",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.4"
   }
 }

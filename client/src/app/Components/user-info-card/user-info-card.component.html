@@ -1,0 +1,12 @@
+<div *ngIf="user" class="user-card">
+    <div class="user-avatar-container">
+        <img [src]="user.avatar_url" alt="{{ user.name }}" class="user-avatar">
+        <p class="user-bio">{{ user.bio }}</p>
+    </div>
+    <div class="user-details">
+        <div class="detail" *ngFor="let item of getDetailLabels()">
+            <span class="detail-label">{{ item.label }}</span>
+            <span class="detail-value">{{ user[item.key] }}</span>
+        </div>
+    </div>
+</div>

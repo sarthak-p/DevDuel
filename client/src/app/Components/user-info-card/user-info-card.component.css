@@ -1,0 +1,72 @@
+.user-card {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid black; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.user-avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    width: 30%;
+    margin-bottom: auto; 
+}
+
+.user-avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    align-self: center;
+    margin-top: 50px;
+}
+
+.user-bio {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin: auto;
+    padding: 0 5px;
+    margin-top: 20px;
+}
+
+.user-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.detail {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.detail-label {
+    display: inline-block; 
+    width: 120px; 
+    background-color: #E1F1FF;
+    border-color: black; 
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    text-align: center;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+.detail-value {
+    text-align: left;
+    margin-left: 10px; 
+    flex: 1; 
+}
