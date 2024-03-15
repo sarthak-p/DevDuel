@@ -24,11 +24,9 @@ export class InspectComponent implements OnInit {
   }
 
   onSubmit() {
-    // Clear previous data and error message
     this.userData = null;
     this.errorMessage = null;
 
-    // Call service to get user data from GitHub
     this.userService.inspectUser(this.username)
       .then(data => {
         if (!data.username) {
