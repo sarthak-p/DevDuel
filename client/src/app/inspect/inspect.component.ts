@@ -41,7 +41,7 @@ export class InspectComponent implements OnInit {
         } else if (err.error && err.error.message) {
           this.errorMessage = `${this.username} was ${err.error.message}`;
         } else {
-          this.errorMessage = "An error occurred while fetching user data.";
+          this.errorMessage = "An error occurred while fetching user data";
         }
         console.error(err);
       });

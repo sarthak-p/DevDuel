@@ -37,7 +37,7 @@ export class DuelComponent implements OnInit {
     this.userService.inspectUser(this.usernameTwo)
   ]).then(([userOneData, userTwoData]) => {
     if (!userOneData || !userTwoData) {
-      this.errorMessage = "One or both users not found.";
+      this.errorMessage = "One or both users not found";
       return;
     }
 
@@ -50,7 +50,7 @@ export class DuelComponent implements OnInit {
         } else if (err.error && err.error.message) {
           this.errorMessage = `One or both users ${err.error.message}`;
         } else {
-          this.errorMessage = "An error occurred while fetching user data.";
+          this.errorMessage = "An error occurred while fetching user data";
         }
         console.error(err);
   });
@@ -61,7 +61,7 @@ export class DuelComponent implements OnInit {
    compareUsers() {
     // Example comparison logic based on 'total-stars'
     if (!this.userOneData || !this.userTwoData) {
-      this.errorMessage = "Could not fetch user data for comparison.";
+      this.errorMessage = "Could not fetch user data for comparison";
       return;
     }
 

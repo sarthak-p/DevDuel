@@ -21,7 +21,6 @@ export class UserInfoCardComponent implements OnInit {
   }
   return [];
 }
-
   
 getDetailLabels(): { key: string; label: string }[] {
   return [
