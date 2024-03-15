@@ -45,14 +45,14 @@ export class DuelComponent implements OnInit {
     this.userTwoData = userTwoData;
     this.compareUsers();
   }).catch(err => {
-    if (err.error && err.error.error && err.error.tips) {
-      this.errorMessage = `${err.error.error} Refer to: ${err.error.tips}`;
-    } else if (err.error && err.error.message) {
-      this.errorMessage = `An error occurred: ${err.error.message}`;
-    } else {
-      this.errorMessage = "An error occurred while fetching user data.";
-    }
-    console.error(err);
+     if (err.error && err.error.error && err.error.tips) {
+          this.errorMessage = `${err.error.error} Refer to: ${err.error.tips}`;
+        } else if (err.error && err.error.message) {
+          this.errorMessage = `One or both users was ${err.error.message}`;
+        } else {
+          this.errorMessage = "An error occurred while fetching user data.";
+        }
+        console.error(err);
   });
 }
 
