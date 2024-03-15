@@ -24,28 +24,28 @@ export class InspectComponent implements OnInit {
   }
 
   onSubmit() {
-    // clear previous data and error message
-    console.log('onSubmit called with username:', this.username);
+    // Clear previous data and error message
     this.userData = null;
     this.errorMessage = null;
 
-    // call service to get user data from GitHub 
+    // Call service to get user data from GitHub
     this.userService.inspectUser(this.username)
       .then(data => {
         if (!data.username) {
-          this.errorMessage = "User not found";
+          this.errorMessage = "User not found.";
           return;
         }
         this.userData = data;
       })
-      
       .catch(err => {
-        if (err.error && err.error.message) {
+        if (err.error && err.error.error && err.error.tips) {
+          this.errorMessage = `${err.error.error} Refer to: ${err.error.tips}`;
+        } else if (err.error && err.error.message) {
           this.errorMessage = `${this.username} was ${err.error.message}`;
         } else {
           this.errorMessage = "An error occurred while fetching user data.";
         }
-          console.error(err);
+        console.error(err);
       });
   }
 } 
