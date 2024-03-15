@@ -48,7 +48,7 @@ export class DuelComponent implements OnInit {
      if (err.error && err.error.error && err.error.tips) {
           this.errorMessage = `${err.error.error} Refer to: ${err.error.tips}`;
         } else if (err.error && err.error.message) {
-          this.errorMessage = `One or both users was ${err.error.message}`;
+          this.errorMessage = `One or both users ${err.error.message}`;
         } else {
           this.errorMessage = "An error occurred while fetching user data.";
         }
