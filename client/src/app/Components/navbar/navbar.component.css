@@ -6,3 +6,7 @@ font-size: 48px;
 text-align: center;
 color: #581DFF;
 }
+
+.active-link .link {
+    color: green;
+}
