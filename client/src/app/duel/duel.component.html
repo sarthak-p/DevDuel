@@ -7,7 +7,7 @@
   <br />
   <button class="submit-button" (click)="onSubmit()">Duel</button>
 
-  <div *ngIf="winner === 'Tie'" style="margin-top: 10px; font-weight: bold; color: #444;">
+  <div *ngIf="winner === 'Tie'" style="margin-top: 5px; font-weight: bold; color: green;">
     IT'S A TIE!
   </div>
 
@@ -17,15 +17,15 @@
     style="display: flex; flex-direction: row; justify-content: center; gap: 20px; margin-top: 5px;">
     <div style="text-align: center; position: relative;">
       <div *ngIf="winner === usernameOne"
-        style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateY(-100%); font-weight: bold; color: green; background-color: white; padding: 2px 5px; border-radius: 5px; margin-bottom: 5px;">
-        WINNER!</div>
+        style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateY(-20%); font-weight: bold; color: green; background-color: white; padding: 2px 5px; border-radius: 5px; margin-bottom: 5px;">
+        WINNER CHICKEN DINNER!</div>
       <app-user-info-card [user]="userOneData"></app-user-info-card>
     </div>
 
     <div style="text-align: center; position: relative;">
       <div *ngIf="winner === usernameTwo"
-        style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateY(-100%); font-weight: bold; color: green; background-color: white; padding: 2px 5px; border-radius: 5px; margin-bottom: 5px;">
-        WINNER!</div>
+        style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateY(-20%); font-weight: bold; color: green; background-color: white; padding: 2px 5px; border-radius: 5px; margin-bottom: 5px;">
+        WINNER CHICKEN DINNER!</div>
       <app-user-info-card [user]="userTwoData"></app-user-info-card>
     </div>
   </div>
