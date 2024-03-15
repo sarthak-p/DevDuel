@@ -22,10 +22,19 @@ export class DuelComponent implements OnInit {
 
   receiveUsernameOne(valueEmitted: string) {
     this.usernameOne = valueEmitted;
+    this.resetDuel();
   }
 
   receiveUsernameTwo(valueEmitted: string) {
     this.usernameTwo = valueEmitted;
+    this.resetDuel();
+  }
+
+  resetDuel(): void {
+    this.winner = null; 
+    this.errorMessage = null; 
+    this.userOneData = null;
+    this.userTwoData = null;
   }
 
   onSubmit() {
@@ -55,8 +64,6 @@ export class DuelComponent implements OnInit {
         console.error(err);
   });
 }
-
-
 
    compareUsers() {
     // Example comparison logic based on 'total-stars'
