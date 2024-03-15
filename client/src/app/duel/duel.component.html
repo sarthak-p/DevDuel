@@ -1,30 +1,31 @@
-<div style="
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20vh;
-  ">
+<div style="display: flex; flex-direction: column; align-items: center; margin-top: 20vh;">
   <div style="display: flex; flex-direction: row">
     <app-text-input (usernameChange)="receiveUsernameOne($event)"></app-text-input>
     <p style="margin: 2vh 20px">VS</p>
     <app-text-input (usernameChange)="receiveUsernameTwo($event)"></app-text-input>
   </div>
   <br />
-  <br />
   <button class="submit-button" (click)="onSubmit()">Duel</button>
 
-  <!-- Conditionally display user cards and winner indication -->
-  <div *ngIf="userOneData && userTwoData"
-    style="display: flex; flex-direction: row; justify-content: center; gap: 20px;">
-    <!-- User One Card -->
-    <div [ngClass]="{'winner-card': winner === usernameOne}" style="align-items: center; text-align: center;">
-      <div *ngIf="winner === usernameOne" style="font-weight: bold; margin-bottom: 10px;">Winner</div>
+  <div *ngIf="winner === 'Tie'" style="margin-top: 10px; font-weight: bold; color: #444;">
+    IT'S A TIE!
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <div *ngIf="userOneData && userTwoData" class="user-cards-container"
+    style="display: flex; flex-direction: row; justify-content: center; gap: 20px; margin-top: 5px;">
+    <div style="text-align: center; position: relative;">
+      <div *ngIf="winner === usernameOne"
+        style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateY(-100%); font-weight: bold; color: green; background-color: white; padding: 2px 5px; border-radius: 5px; margin-bottom: 5px;">
+        WINNER!</div>
       <app-user-info-card [user]="userOneData"></app-user-info-card>
     </div>
 
-    <!-- User Two Card -->
-    <div [ngClass]="{'winner-card': winner === usernameTwo}" style="align-items: center; text-align: center;">
-      <div *ngIf="winner === usernameTwo" style="font-weight: bold; margin-bottom: 10px;">Winner</div>
+    <div style="text-align: center; position: relative;">
+      <div *ngIf="winner === usernameTwo"
+        style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateY(-100%); font-weight: bold; color: green; background-color: white; padding: 2px 5px; border-radius: 5px; margin-bottom: 5px;">
+        WINNER!</div>
       <app-user-info-card [user]="userTwoData"></app-user-info-card>
     </div>
   </div>

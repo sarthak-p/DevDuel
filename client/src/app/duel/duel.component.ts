@@ -28,26 +28,34 @@ export class DuelComponent implements OnInit {
     this.usernameTwo = valueEmitted;
   }
 
-   onSubmit() {
-    Promise.all([
-      this.userService.inspectUser(this.usernameOne),
-      this.userService.inspectUser(this.usernameTwo)
-    ]).then(([userOneData, userTwoData]) => {
-      this.userOneData = userOneData;
-      this.userTwoData = userTwoData;
-      this.compareUsers();
-    }).catch(err => {
-      // Error handling similar to InspectComponent
-      if (err.error && err.error.error && err.error.tips) {
-        this.errorMessage = `${err.error.error} Refer to: ${err.error.tips}`;
-      } else if (err.error && err.error.message) {
-        this.errorMessage = `An error occurred: ${err.error.message}`;
-      } else {
-        this.errorMessage = "An error occurred while fetching user data.";
-      }
-      console.error(err);
-    });
-  }
+  onSubmit() {
+  this.errorMessage = null;
+  this.winner = null; 
+
+  Promise.all([
+    this.userService.inspectUser(this.usernameOne),
+    this.userService.inspectUser(this.usernameTwo)
+  ]).then(([userOneData, userTwoData]) => {
+    if (!userOneData || !userTwoData) {
+      this.errorMessage = "One or both users not found.";
+      return;
+    }
+
+    this.userOneData = userOneData;
+    this.userTwoData = userTwoData;
+    this.compareUsers();
+  }).catch(err => {
+    if (err.error && err.error.error && err.error.tips) {
+      this.errorMessage = `${err.error.error} Refer to: ${err.error.tips}`;
+    } else if (err.error && err.error.message) {
+      this.errorMessage = `An error occurred: ${err.error.message}`;
+    } else {
+      this.errorMessage = "An error occurred while fetching user data.";
+    }
+    console.error(err);
+  });
+}
+
 
 
    compareUsers() {
