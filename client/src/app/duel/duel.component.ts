@@ -66,7 +66,6 @@ export class DuelComponent implements OnInit {
 }
 
    compareUsers() {
-    // Example comparison logic based on 'total-stars'
     if (!this.userOneData || !this.userTwoData) {
       this.errorMessage = "Could not fetch user data for comparison";
       return;
