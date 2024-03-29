@@ -1,47 +1,84 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=14289346&assignment_repo_type=AssignmentRepo)
 # Angular Dev-Duel
-# Assignment Overview
 
-For this assignment, students are tasked with developing a small full-stack application that interfaces with [GitHub's API](https://developer.github.com/v3/) in order to aggregate, transform, and display a given user's profile and repository data.  
+## Overview
 
-The assignment is composed of two independent pieces that make up a simple full-stack application.
-	
-1. A [Node](https://nodejs.org/en/docs/) **server** exposing an API using [Express](https://expressjs.com/en/api.html)
-2. A Web-based **client** using [Angular](https://angular.io)
+Angular Dev-Duel is an engaging full-stack application that utilizes Angular for the frontend and Node.js with Express for the backend server. This project interfaces with GitHub's API to aggregate, transform, and display data from a user's GitHub profile and repositories. It's designed to be an educational challenge for students to develop practical skills in building full-stack applications.
 
+### Features
 
-This specification is split into multiple parts. 
-- [Assignment Overview](README.md) - Gives a general overview of the assignment and technical requirements
-- [Development](DEVELOPMENT.md) - Instructions on setting up development environment and servers
-- [Server](server/README.md) - Information specific to Node API implementation
+- **User Profile Inspection**: Enter a GitHub username to fetch and display the user's profile data, including repositories, followers, and more.
+- **Duel Mode**: Compare two GitHub users by entering their usernames, displaying their data side-by-side to determine a "winner" based on custom criteria
+- **Responsive Design**: Crafted to provide an optimal viewing experience across a wide range of devices.
 
----
+### Built With
 
-## Requirements Overview
+- **Angular**: For crafting the dynamic and responsive client-side application.
+- **Node.js and Express**: Used to create the backend API that interfaces with GitHub's API.
+- **GitHub API**: For fetching the necessary user and repository data.
 
-Students will implement a web application to communicate with a provided supporting API to get the following data for a given user's GitHub profile. The backend has been implemented as a Node API using Express that will call GitHub's API to fetch data necessary to derive/display the data specified. The user will see a home page where they can choose between two options: **inspect** or **duel**.
+## Getting Started
 
-## Token setup
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-In order to increase your rate limit with the GitHub API and improve overall testability of your application as you develop, you will need to create and use a GitHub token. Instructions for this process are included in the [token-setup/README.md](token-setup/README.md).
+### Prerequisites
 
-# Getting Started with the Client
-Students will build a client side application using Angular. The app will consist of a Home Page, an Inspect Page, and a Duel Page. Refer to the wireframe below as a basic guideline for the structure.
+- Node.js (latest stable version)
+- Angular CLI
+- A GitHub token for increased API rate limits and improved testability
 
-### Inspect
-On the **inspect** page, a client will enter a username, submit, and be displayed the user's `profile` data.
+### Installation
 
-### Duel
-For the **duel** page, it is left up to the student to choose how a winner is determined. Two usernames will be entered, submitted, and their `profile` data displayed. Using the fields that are received from the API and displayed to the user, the student will need to visually signify differences in the data displayed as well as make an overall winner apparent to the user.
+1. **Clone the repository:**
 
-## Error Handling
-Display the error messages given by the API.
+```bash
+git clone https://github.com/yourusername/angular-dev-duel.git
+```
 
----
+2. **Navigate to the project directory:**
 
-### Wireframe
-[Figma Wireframe](https://www.figma.com/file/nas0hU6wALYMd22JjSRzbz/Dev-Duel?node-id=0%3A1)
+   ```bash
+   cd angular-dev-duel
+   ```
 
-## As mentioned in the Assessment Overview at the top of this page, additional information and token setup for the server can be found in its respective folder `README.md`.
+3. **Install the required npm packages:**
 
-#### [server/README.md](server/README.md)
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server:**
+   ```bash
+   ng serve
+   ```
+
+5. Set up your GitHub token by following the instructions in token-setup/README.md.
+
+### Start the development servers
+
+1. **To serve the API:**
+
+   ```bash
+   npm run serve-api
+   ```
+
+2. **To serve the static files:**
+
+   ```bash
+   npm run serve-static
+   ```
+
+3. **To run both concurrently**
+
+   ```bash
+   npm run serve-static
+   ```
+
+4. Navigate to http://localhost:4200/ to view the client application, and ensure the API is accessible via http://localhost:3000/api/health-check.
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+## License
+
+This project is licensed under the MIT License.
