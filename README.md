@@ -4,6 +4,8 @@
 
 Angular Dev-Duel is an engaging full-stack application that utilizes Angular for the frontend and Node.js with Express for the backend server. This project interfaces with GitHub's API to aggregate, transform, and display data from a user's GitHub profile and repositories. It's designed to be an educational challenge for students to develop practical skills in building full-stack applications.
 
+![Game Interface](images/devduel.png)
+
 ### Features
 
 - **User Profile Inspection**: Enter a GitHub username to fetch and display the user's profile data, including repositories, followers, and more.
