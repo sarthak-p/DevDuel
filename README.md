@@ -39,7 +39,7 @@ These instructions will get you a copy of the project up and running on your loc
 2. **Navigate to the project directory:**
 
    ```bash
-   cd angular-dev-duel
+   cd DevDuel
    ```
 
 3. **Install the required npm packages:**
@@ -48,10 +48,11 @@ These instructions will get you a copy of the project up and running on your loc
    npm install
    ```
 
-4. **Start the development server:**
+<!--- 4. **Start the development server:**
    ```bash
-   ng serve
+   ng serve 
    ```
+   --->
 
 5. Set up your GitHub token by following the instructions in token-setup/README.md.
 
@@ -72,7 +73,7 @@ These instructions will get you a copy of the project up and running on your loc
 3. **To run both concurrently**
 
    ```bash
-   npm run serve-static
+   npm run serve
    ```
 
 4. Navigate to http://localhost:4200/ to view the client application, and ensure the API is accessible via http://localhost:3000/api/health-check.
