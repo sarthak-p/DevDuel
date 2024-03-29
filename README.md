@@ -1,8 +1,8 @@
-# Dev-Duel
+# Dev Duel
 
 ## Overview
 
-Dev-Duel is an engaging full-stack application that utilizes Angular for the frontend and Node.js with Express for the backend server. This project interfaces with GitHub's API to aggregate, transform, and display data from a user's GitHub profile and repositories. It's designed to be an educational challenge for students to develop practical skills in building full-stack applications.
+Dev Duel is an engaging full-stack application that utilizes Angular for the frontend and Node.js with Express for the backend server. This project interfaces with GitHub's API to aggregate, transform, and display data from a user's GitHub profile and repositories. It's designed to be an educational challenge for students to develop practical skills in building full-stack applications.
 
 ![Game Interface](images/devduel.png)
 
