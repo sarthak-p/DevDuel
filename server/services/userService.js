@@ -46,7 +46,6 @@ const favoriteLanguage = repos => {
   }
 }
   
-
 const totalStars = repos =>
   repos.reduce((total, repo) => total + repo['stargazers_count'], 0)
 
